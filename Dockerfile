@@ -6,10 +6,10 @@ MAINTAINER nityaranjan190592@gmail.com
 RUN yum install -y httpd \ 
 zip \ 
 unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page276/jon.zip  /var/www/html/
+ADD https://github.com/mdn/beginner-html-site-styled/archive/refs/heads/gh-pages.zip  /var/www/html/
 WORKDIR /var/www/html
-RUN unzip jon.zip
-RUN cp -rvf jon/* .
-RUN rm -rvf jon.zip jon
+RUN unzip gh-pages.zip
+RUN cp -rvf beginner-html-site-styled-gh-pages/* .
+RUN rm -rvf gh-pages.zip beginner-html-site-styled-gh-pages
 CMD ["/usr/sbin/httpd" , "-D" , "FOREGROUND"]
 EXPOSE 80
