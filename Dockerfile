@@ -6,10 +6,10 @@ MAINTAINER nityaranjan190592@gmail.com
 RUN yum install -y httpd \ 
 zip \ 
 unzip
-ADD https://github.com/Selenium100/project-website-template/archive/refs/heads/master.zip  /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/dryme.zip  /var/www/html/
 WORKDIR /var/www/html
-RUN unzip master.zip
-RUN cp -rvf project-website-template-master/* .
-RUN rm -rvf master.zip project-website-template-master
+RUN unzip dryme.zip
+RUN cp -rvf  laundry-service-website-template/* .
+RUN rm -rvf dryme.zip  laundry-service-website-template
 CMD ["/usr/sbin/httpd" , "-D" , "FOREGROUND"]
 EXPOSE 80
